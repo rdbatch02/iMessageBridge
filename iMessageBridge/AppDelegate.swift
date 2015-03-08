@@ -16,6 +16,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        var imc = iMessageController()
+        println(imc.getMessages())
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
