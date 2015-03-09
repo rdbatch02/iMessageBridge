@@ -1,4 +1,5 @@
-# iMessageBridge
+# iMessageBridge [![Build Status](https://travis-ci.org/c1phr/iMessageBridge.svg?branch=master)](https://travis-ci.org/c1phr/iMessageBridge)
+
 iMessage to IRC bridge built in Swift
 
 ## Contributing
