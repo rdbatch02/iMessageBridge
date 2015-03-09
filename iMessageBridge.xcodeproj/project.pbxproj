@@ -13,6 +13,7 @@
 		187361FD1AAAAB1D008038A9 /* iMessageBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */; };
 		187362181AAAAC37008038A9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1873620F1AAAAC24008038A9 /* SQLite.framework */; };
 		187362201AAC0586008038A9 /* iMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873621F1AAC0586008038A9 /* iMessageController.swift */; };
+		187362301AAE4433008038A9 /* IRCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873622F1AAE4433008038A9 /* IRCController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +72,7 @@
 		187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBridgeTests.swift; sourceTree = "<group>"; };
 		187362061AAAAC24008038A9 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
 		1873621F1AAC0586008038A9 /* iMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iMessageController.swift; sourceTree = "<group>"; };
+		1873622F1AAE4433008038A9 /* IRCController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 		187361E81AAAAB1D008038A9 /* iMessageBridge */ = {
 			isa = PBXGroup;
 			children = (
+				1873622F1AAE4433008038A9 /* IRCController.swift */,
 				187361EB1AAAAB1D008038A9 /* AppDelegate.swift */,
 				187361ED1AAAAB1D008038A9 /* Images.xcassets */,
 				187361EF1AAAAB1D008038A9 /* MainMenu.xib */,
@@ -296,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187362301AAE4433008038A9 /* IRCController.swift in Sources */,
 				187361EC1AAAAB1D008038A9 /* AppDelegate.swift in Sources */,
 				187362201AAC0586008038A9 /* iMessageController.swift in Sources */,
 			);
@@ -490,6 +494,7 @@
 				187362021AAAAB1D008038A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		187362031AAAAB1D008038A9 /* Build configuration list for PBXNativeTarget "iMessageBridgeTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +503,7 @@
 				187362051AAAAB1D008038A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
