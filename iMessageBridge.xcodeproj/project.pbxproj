@@ -13,7 +13,6 @@
 		187361FD1AAAAB1D008038A9 /* iMessageBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */; };
 		187362181AAAAC37008038A9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1873620F1AAAAC24008038A9 /* SQLite.framework */; };
 		187362201AAC0586008038A9 /* iMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873621F1AAC0586008038A9 /* iMessageController.swift */; };
-		187362221AAC1FCB008038A9 /* IRCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187362211AAC1FCB008038A9 /* IRCController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +71,6 @@
 		187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBridgeTests.swift; sourceTree = "<group>"; };
 		187362061AAAAC24008038A9 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
 		1873621F1AAC0586008038A9 /* iMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iMessageController.swift; sourceTree = "<group>"; };
-		187362211AAC1FCB008038A9 /* IRCController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 				187361EF1AAAAB1D008038A9 /* MainMenu.xib */,
 				187361E91AAAAB1D008038A9 /* Supporting Files */,
 				1873621F1AAC0586008038A9 /* iMessageController.swift */,
-				187362211AAC1FCB008038A9 /* IRCController.swift */,
 			);
 			path = iMessageBridge;
 			sourceTree = "<group>";
@@ -299,7 +296,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				187362221AAC1FCB008038A9 /* IRCController.swift in Sources */,
 				187361EC1AAAAB1D008038A9 /* AppDelegate.swift in Sources */,
 				187362201AAC0586008038A9 /* iMessageController.swift in Sources */,
 			);
