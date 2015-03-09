@@ -1,0 +1,509 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		187361EC1AAAAB1D008038A9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187361EB1AAAAB1D008038A9 /* AppDelegate.swift */; };
+		187361EE1AAAAB1D008038A9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 187361ED1AAAAB1D008038A9 /* Images.xcassets */; };
+		187361F11AAAAB1D008038A9 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 187361EF1AAAAB1D008038A9 /* MainMenu.xib */; };
+		187361FD1AAAAB1D008038A9 /* iMessageBridgeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */; };
+		187362181AAAAC37008038A9 /* SQLite.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1873620F1AAAAC24008038A9 /* SQLite.framework */; };
+		187362201AAC0586008038A9 /* iMessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1873621F1AAC0586008038A9 /* iMessageController.swift */; };
+		187362221AAC1FCB008038A9 /* IRCController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187362211AAC1FCB008038A9 /* IRCController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		187361F71AAAAB1D008038A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187361DE1AAAAB1D008038A9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 187361E51AAAAB1D008038A9;
+			remoteInfo = iMessageBridge;
+		};
+		1873620E1AAAAC24008038A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187362061AAAAC24008038A9 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3773F319C8CBB3004FCF85;
+			remoteInfo = SQLite;
+		};
+		187362101AAAAC24008038A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187362061AAAAC24008038A9 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DC3773FE19C8CBB3004FCF85;
+			remoteInfo = "SQLite Tests";
+		};
+		187362121AAAAC24008038A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187362061AAAAC24008038A9 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCC6B3801A9191C300734B78;
+			remoteInfo = SQLiteCipher;
+		};
+		187362141AAAAC24008038A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187362061AAAAC24008038A9 /* SQLite.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = DCC6B3921A9191D100734B78;
+			remoteInfo = "SQLiteCipher Tests";
+		};
+		187362161AAAAC2F008038A9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 187362061AAAAC24008038A9 /* SQLite.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = DC3773F219C8CBB3004FCF85;
+			remoteInfo = SQLite;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		187361E61AAAAB1D008038A9 /* iMessageBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iMessageBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		187361EA1AAAAB1D008038A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187361EB1AAAAB1D008038A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		187361ED1AAAAB1D008038A9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		187361F01AAAAB1D008038A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		187361F61AAAAB1D008038A9 /* iMessageBridgeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iMessageBridgeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		187361FB1AAAAB1D008038A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMessageBridgeTests.swift; sourceTree = "<group>"; };
+		187362061AAAAC24008038A9 /* SQLite.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SQLite.xcodeproj; path = SQLite.swift/SQLite.xcodeproj; sourceTree = "<group>"; };
+		1873621F1AAC0586008038A9 /* iMessageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = iMessageController.swift; sourceTree = "<group>"; };
+		187362211AAC1FCB008038A9 /* IRCController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IRCController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		187361E31AAAAB1D008038A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187362181AAAAC37008038A9 /* SQLite.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187361F31AAAAB1D008038A9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		187361DD1AAAAB1D008038A9 = {
+			isa = PBXGroup;
+			children = (
+				187361E81AAAAB1D008038A9 /* iMessageBridge */,
+				187361F91AAAAB1D008038A9 /* iMessageBridgeTests */,
+				187361E71AAAAB1D008038A9 /* Products */,
+				187362061AAAAC24008038A9 /* SQLite.xcodeproj */,
+			);
+			sourceTree = "<group>";
+		};
+		187361E71AAAAB1D008038A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				187361E61AAAAB1D008038A9 /* iMessageBridge.app */,
+				187361F61AAAAB1D008038A9 /* iMessageBridgeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		187361E81AAAAB1D008038A9 /* iMessageBridge */ = {
+			isa = PBXGroup;
+			children = (
+				187361EB1AAAAB1D008038A9 /* AppDelegate.swift */,
+				187361ED1AAAAB1D008038A9 /* Images.xcassets */,
+				187361EF1AAAAB1D008038A9 /* MainMenu.xib */,
+				187361E91AAAAB1D008038A9 /* Supporting Files */,
+				1873621F1AAC0586008038A9 /* iMessageController.swift */,
+				187362211AAC1FCB008038A9 /* IRCController.swift */,
+			);
+			path = iMessageBridge;
+			sourceTree = "<group>";
+		};
+		187361E91AAAAB1D008038A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				187361EA1AAAAB1D008038A9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		187361F91AAAAB1D008038A9 /* iMessageBridgeTests */ = {
+			isa = PBXGroup;
+			children = (
+				187361FC1AAAAB1D008038A9 /* iMessageBridgeTests.swift */,
+				187361FA1AAAAB1D008038A9 /* Supporting Files */,
+			);
+			path = iMessageBridgeTests;
+			sourceTree = "<group>";
+		};
+		187361FA1AAAAB1D008038A9 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				187361FB1AAAAB1D008038A9 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		187362071AAAAC24008038A9 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1873620F1AAAAC24008038A9 /* SQLite.framework */,
+				187362111AAAAC24008038A9 /* SQLite Tests.xctest */,
+				187362131AAAAC24008038A9 /* SQLite.framework */,
+				187362151AAAAC24008038A9 /* SQLiteCipher Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		187361E51AAAAB1D008038A9 /* iMessageBridge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187362001AAAAB1D008038A9 /* Build configuration list for PBXNativeTarget "iMessageBridge" */;
+			buildPhases = (
+				187361E21AAAAB1D008038A9 /* Sources */,
+				187361E31AAAAB1D008038A9 /* Frameworks */,
+				187361E41AAAAB1D008038A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187362171AAAAC2F008038A9 /* PBXTargetDependency */,
+			);
+			name = iMessageBridge;
+			productName = iMessageBridge;
+			productReference = 187361E61AAAAB1D008038A9 /* iMessageBridge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		187361F51AAAAB1D008038A9 /* iMessageBridgeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 187362031AAAAB1D008038A9 /* Build configuration list for PBXNativeTarget "iMessageBridgeTests" */;
+			buildPhases = (
+				187361F21AAAAB1D008038A9 /* Sources */,
+				187361F31AAAAB1D008038A9 /* Frameworks */,
+				187361F41AAAAB1D008038A9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				187361F81AAAAB1D008038A9 /* PBXTargetDependency */,
+			);
+			name = iMessageBridgeTests;
+			productName = iMessageBridgeTests;
+			productReference = 187361F61AAAAB1D008038A9 /* iMessageBridgeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		187361DE1AAAAB1D008038A9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Ryan Batchelder";
+				TargetAttributes = {
+					187361E51AAAAB1D008038A9 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					187361F51AAAAB1D008038A9 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 187361E51AAAAB1D008038A9;
+					};
+				};
+			};
+			buildConfigurationList = 187361E11AAAAB1D008038A9 /* Build configuration list for PBXProject "iMessageBridge" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 187361DD1AAAAB1D008038A9;
+			productRefGroup = 187361E71AAAAB1D008038A9 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 187362071AAAAC24008038A9 /* Products */;
+					ProjectRef = 187362061AAAAC24008038A9 /* SQLite.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				187361E51AAAAB1D008038A9 /* iMessageBridge */,
+				187361F51AAAAB1D008038A9 /* iMessageBridgeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1873620F1AAAAC24008038A9 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 1873620E1AAAAC24008038A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		187362111AAAAC24008038A9 /* SQLite Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLite Tests.xctest";
+			remoteRef = 187362101AAAAC24008038A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		187362131AAAAC24008038A9 /* SQLite.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = SQLite.framework;
+			remoteRef = 187362121AAAAC24008038A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		187362151AAAAC24008038A9 /* SQLiteCipher Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "SQLiteCipher Tests.xctest";
+			remoteRef = 187362141AAAAC24008038A9 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		187361E41AAAAB1D008038A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187361EE1AAAAB1D008038A9 /* Images.xcassets in Resources */,
+				187361F11AAAAB1D008038A9 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187361F41AAAAB1D008038A9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		187361E21AAAAB1D008038A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187362221AAC1FCB008038A9 /* IRCController.swift in Sources */,
+				187361EC1AAAAB1D008038A9 /* AppDelegate.swift in Sources */,
+				187362201AAC0586008038A9 /* iMessageController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		187361F21AAAAB1D008038A9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				187361FD1AAAAB1D008038A9 /* iMessageBridgeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		187361F81AAAAB1D008038A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 187361E51AAAAB1D008038A9 /* iMessageBridge */;
+			targetProxy = 187361F71AAAAB1D008038A9 /* PBXContainerItemProxy */;
+		};
+		187362171AAAAC2F008038A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLite;
+			targetProxy = 187362161AAAAC2F008038A9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		187361EF1AAAAB1D008038A9 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				187361F01AAAAB1D008038A9 /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		187361FE1AAAAB1D008038A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		187361FF1AAAAB1D008038A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		187362011AAAAB1D008038A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = iMessageBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		187362021AAAAB1D008038A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = iMessageBridge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		187362041AAAAB1D008038A9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iMessageBridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMessageBridge.app/Contents/MacOS/iMessageBridge";
+			};
+			name = Debug;
+		};
+		187362051AAAAB1D008038A9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = iMessageBridgeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMessageBridge.app/Contents/MacOS/iMessageBridge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		187361E11AAAAB1D008038A9 /* Build configuration list for PBXProject "iMessageBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187361FE1AAAAB1D008038A9 /* Debug */,
+				187361FF1AAAAB1D008038A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		187362001AAAAB1D008038A9 /* Build configuration list for PBXNativeTarget "iMessageBridge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187362011AAAAB1D008038A9 /* Debug */,
+				187362021AAAAB1D008038A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		187362031AAAAB1D008038A9 /* Build configuration list for PBXNativeTarget "iMessageBridgeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				187362041AAAAB1D008038A9 /* Debug */,
+				187362051AAAAB1D008038A9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 187361DE1AAAAB1D008038A9 /* Project object */;
+}
