@@ -1,0 +1,5 @@
+language: objective-c
+xcode_project: iMessageBridge.xcodeproj
+xcode_scheme: iMessageBridge
+notifications:
+  email: false
