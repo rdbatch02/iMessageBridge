@@ -17,10 +17,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
 
-        //var imc = iMessageController()
-        //println(imc.getMessages())
-        var irc = IRCController()
-        irc.sendMessage("test")
+        var imc = iMessageController()
+        println(imc.getNewMessages())
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {
@@ -29,4 +27,3 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
 }
-
