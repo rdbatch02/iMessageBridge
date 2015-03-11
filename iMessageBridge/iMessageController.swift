@@ -76,19 +76,35 @@ class iMessageController: NSObject
     func getNewMessages() -> Void
     {
         var oldMessage = getMessages()
-        
+        var newMEssage = ""
         let priority = Int(QOS_CLASS_BACKGROUND.value)
         dispatch_async(dispatch_get_global_queue(priority, 0),
         {
             println(oldMessage)
             while true
             {
-                if self.getMessages() != oldMessage
+                // This chat ID might be unique to my chat database. We should check this
+                let chat_name = self.chat_name_table.select(self.rowid).filter(like("B040DCFF-5CBE-4366-AC98-4E2F93BFBD52", self.group_id))
+                
+                for chat in chat_name
                 {
-                    oldMessage = self.getMessages()
-                    println(oldMessage)
+                    self.chats.append(chat[self.rowid])
                 }
-                sleep(2)
+                
+                let message_relation = self.chat_message_join.select(self.message_id).filter(contains(self.chats, self.chat_id))
+                
+                for relation in message_relation
+                {
+                    self.relations.append(relation[self.message_id])
+                }
+                
+                let query = self.message_db.select(self.message_text).filter(contains(self.relations, self.rowid)).order(self.rowid.desc).limit(1)
+                
+                if (query.first?.get(self.message_text) != nil)
+                {
+                    println((query.first?.get(self.message_text)!)!)
+                }
+                //println(self.getMessages())
             }
         })
         
