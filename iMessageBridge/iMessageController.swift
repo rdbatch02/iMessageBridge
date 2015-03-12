@@ -86,7 +86,13 @@ class iMessageController: NSObject
         
         if (query.first?.get(message_text) != nil)
         {
-            return [(query.first?.get(message_sender)!)!, (query.first?.get(message_text)!)!]
+            var account = (query.first?.get(message_sender)!)! as String
+            var name = getName(account.substringFromIndex(advance(account.startIndex, 2)))
+            if name == ""
+            {
+                name = account
+            }
+            return [name, (query.first?.get(message_text)!)!]
         }
         
         return []
@@ -99,13 +105,13 @@ class iMessageController: NSObject
         let priority = Int(QOS_CLASS_BACKGROUND.value)
         dispatch_async(dispatch_get_global_queue(priority, 0),
         {
-            println(self.getName(oldMessage[0].substringFromIndex(advance(oldMessage[0].startIndex, 2))) + ": " + oldMessage[1])
+            println(oldMessage[0] + ": " + oldMessage[1])
             while true
             {
                 if self.getMessages()[0] != oldMessage[0]
                 {
                     oldMessage = self.getMessages()
-                    println(self.getName(oldMessage[0].substringFromIndex(advance(oldMessage[0].startIndex, 2))) + ": " + oldMessage[1])
+                    println(oldMessage[0] + ": " + oldMessage[1])
                 }
             }
         })
