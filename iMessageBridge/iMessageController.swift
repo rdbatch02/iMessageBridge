@@ -100,6 +100,19 @@ class iMessageController: NSObject
         return []
     }
     
+    func setOutputText(outputText:String)
+    {
+        var oldText = self.outputField.stringValue
+        if countElements(oldText) > 1000
+        {
+            self.outputField.stringValue = outputText
+        }
+        else
+        {
+            self.outputField.stringValue = self.outputField.stringValue + "\n" + outputText
+        }
+    }
+    
     func getNewMessages() -> Void
     {
         var oldMessage = self.getMessages()
@@ -108,16 +121,17 @@ class iMessageController: NSObject
         dispatch_async(dispatch_get_global_queue(priority, 0),
         {
             println(oldMessage[0] + ": " + oldMessage[1])
-            self.outputField.stringValue = self.outputField.stringValue + "\n" + (oldMessage[0] + ": " + oldMessage[1])
+            self.setOutputText(oldMessage[0] + ": " + oldMessage[1])
             while true
             {
-                if self.getMessages()[0] != oldMessage[0]
+                if self.getMessages()[1] != oldMessage[1]
                 {
                     oldMessage = self.getMessages()
                     println(oldMessage[0] + ": " + oldMessage[1])
-                    self.outputField.stringValue = self.outputField.stringValue + "\n" + (oldMessage[0] + ": " + oldMessage[1])
+                    self.setOutputText(oldMessage[0] + ": " + oldMessage[1])
                 }
                 sleep(1)
+                
             }
         })
         
