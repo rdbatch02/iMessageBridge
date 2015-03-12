@@ -26,8 +26,9 @@ class iMessageController: NSObject
     var message_text:Expression<String?>
     var message_sender:Expression<String?>
     var address_book:ABAddressBook
+    var outputField:NSTextField!
     
-    override init() {
+    init(outputField:NSTextField!) {
         self.db = Database(NSHomeDirectory() + "/Library/Messages/chat.db", readonly: true)
         self.relations = [Int]()
         self.chats = [Int]()
@@ -40,7 +41,8 @@ class iMessageController: NSObject
         self.group_id = Expression<String>("group_id")
         self.message_text = Expression<String?>("text")
         self.message_sender = Expression<String?>("account")
-        address_book = ABAddressBook.sharedAddressBook()
+        self.address_book = ABAddressBook.sharedAddressBook()
+        self.outputField = outputField
         
         super.init()
     }
@@ -74,7 +76,7 @@ class iMessageController: NSObject
         {
             chats.append(chat[rowid])
         }
-        chats = [116] //TODO: Remove this after testing
+        //chats = [116] //Remove this after testing
         let message_relation = chat_message_join.select(message_id).filter(contains(chats, chat_id))
         
         for relation in message_relation
@@ -106,12 +108,14 @@ class iMessageController: NSObject
         dispatch_async(dispatch_get_global_queue(priority, 0),
         {
             println(oldMessage[0] + ": " + oldMessage[1])
+            self.outputField.stringValue = self.outputField.stringValue + "\n" + (oldMessage[0] + ": " + oldMessage[1])
             while true
             {
                 if self.getMessages()[0] != oldMessage[0]
                 {
                     oldMessage = self.getMessages()
                     println(oldMessage[0] + ": " + oldMessage[1])
+                    self.outputField.stringValue = self.outputField.stringValue + "\n" + (oldMessage[0] + ": " + oldMessage[1])
                 }
                 sleep(1)
             }

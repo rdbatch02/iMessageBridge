@@ -11,13 +11,15 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+
+    @IBOutlet weak var outputField: NSTextField!
     @IBOutlet weak var window: NSWindow!
 
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
 
-        var imc = iMessageController()
+        var imc = iMessageController(outputField: outputField)
         println(imc.getNewMessages())
     }
 
