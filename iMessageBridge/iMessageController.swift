@@ -113,6 +113,7 @@ class iMessageController: NSObject
                     oldMessage = self.getMessages()
                     println(oldMessage[0] + ": " + oldMessage[1])
                 }
+                sleep(1)
             }
         })
         
