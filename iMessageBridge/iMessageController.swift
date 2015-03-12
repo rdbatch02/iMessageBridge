@@ -8,6 +8,8 @@
 
 import Foundation
 import SQLite
+import Dispatch
+import AddressBook
 
 class iMessageController: NSObject
 {
@@ -22,6 +24,8 @@ class iMessageController: NSObject
     var message_id:Expression<Int>
     var group_id:Expression<String>
     var message_text:Expression<String?>
+    var message_sender:Expression<String?>
+    var address_book:ABAddressBook
     
     override init() {
         self.db = Database(NSHomeDirectory() + "/Library/Messages/chat.db", readonly: true)
@@ -35,7 +39,34 @@ class iMessageController: NSObject
         self.message_id = Expression<Int>("message_id")
         self.group_id = Expression<String>("group_id")
         self.message_text = Expression<String?>("text")
+        self.message_sender = Expression<String?>("account")
+        address_book = ABAddressBook.sharedAddressBook()
         
+        super.init()
+    }
+    
+    func getName(searchString:String) -> String
+    {
+        let emailSearch = ABPerson.searchElementForProperty(kABEmailProperty,
+            label: nil,
+            key: nil,
+            value: searchString,
+            comparison: CFIndex(kABContainsSubStringCaseInsensitive.value) as ABSearchComparison)
+        
+        let phoneSearch = ABPerson.searchElementForProperty(kABPhoneProperty,
+            label: nil,
+            key: nil,
+            value: searchString,
+            comparison: CFIndex(kABContainsSubStringCaseInsensitive.value) as ABSearchComparison)
+        
+        var search = ABSearchElement(forConjunction: CFIndex(kABSearchOr.value), children: [emailSearch, phoneSearch])
+        var result = self.address_book.recordsMatchingSearchElement(search) as [ABRecord]
+        var name = (result.first?.valueForProperty(kABFirstNameProperty) as String? ?? "") + " " + (result.first?.valueForProperty(kABLastNameProperty) as String? ?? "")
+        return name
+    }
+    
+    func getMessages() -> Array<String>
+    {
         // This chat ID might be unique to my chat database. We should check this
         let chat_name = chat_name_table.select(rowid).filter(like("B040DCFF-5CBE-4366-AC98-4E2F93BFBD52", group_id))
         
@@ -43,7 +74,7 @@ class iMessageController: NSObject
         {
             chats.append(chat[rowid])
         }
-        
+        chats = [116] //TODO: Remove this after testing
         let message_relation = chat_message_join.select(message_id).filter(contains(chats, chat_id))
         
         for relation in message_relation
@@ -51,60 +82,31 @@ class iMessageController: NSObject
             relations.append(relation[message_id])
         }
         
-        super.init()
-    }
-    func getMessages() -> String
-    {
-        let query = message_db.select(message_text).filter(contains(relations, rowid)).order(rowid.desc).limit(1)
+        let query = message_db.select(message_text, message_sender).filter(contains(relations, rowid)).order(rowid.desc).limit(1)
         
         if (query.first?.get(message_text) != nil)
         {
-            return (query.first?.get(message_text)!)!
+            return [(query.first?.get(message_sender)!)!, (query.first?.get(message_text)!)!]
         }
         
-//        for message in query
-//        {
-//            if (message[message_text] != nil)
-//            {
-//                return message[message_text]!
-//            }
-//        }
-        
-        return ""
+        return []
     }
     
     func getNewMessages() -> Void
     {
-        var oldMessage = getMessages()
-        var newMEssage = ""
+        var oldMessage = self.getMessages()
+        
         let priority = Int(QOS_CLASS_BACKGROUND.value)
         dispatch_async(dispatch_get_global_queue(priority, 0),
         {
-            println(oldMessage)
+            println(self.getName(oldMessage[0].substringFromIndex(advance(oldMessage[0].startIndex, 2))) + ": " + oldMessage[1])
             while true
             {
-                // This chat ID might be unique to my chat database. We should check this
-                let chat_name = self.chat_name_table.select(self.rowid).filter(like("B040DCFF-5CBE-4366-AC98-4E2F93BFBD52", self.group_id))
-                
-                for chat in chat_name
+                if self.getMessages()[0] != oldMessage[0]
                 {
-                    self.chats.append(chat[self.rowid])
+                    oldMessage = self.getMessages()
+                    println(self.getName(oldMessage[0].substringFromIndex(advance(oldMessage[0].startIndex, 2))) + ": " + oldMessage[1])
                 }
-                
-                let message_relation = self.chat_message_join.select(self.message_id).filter(contains(self.chats, self.chat_id))
-                
-                for relation in message_relation
-                {
-                    self.relations.append(relation[self.message_id])
-                }
-                
-                let query = self.message_db.select(self.message_text).filter(contains(self.relations, self.rowid)).order(self.rowid.desc).limit(1)
-                
-                if (query.first?.get(self.message_text) != nil)
-                {
-                    println((query.first?.get(self.message_text)!)!)
-                }
-                //println(self.getMessages())
             }
         })
         
